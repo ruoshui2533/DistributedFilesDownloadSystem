@@ -1,0 +1,9 @@
+module ddc
+{
+    typedef sequence<octet> Data;
+    exception UnknownException {};
+    interface TFile
+    {
+        void download(in string fileName,out Data bytes) raises (UnknownException);
+    };
+};
